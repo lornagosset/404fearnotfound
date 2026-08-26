@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Mon jeu Scratch</title>
+<style>
+  body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  iframe {
+    border: none;
+    width: 100%;
+    max-width: 960px;
+    height: 540px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Mon jeu</h1>
+
+<!-- Ton jeu Scratch, mis à jour automatiquement -->
+<iframe 
+  src="https://scratch.mit.edu/projects/1366469275/fullscreen"
+  allowfullscreen>
+</iframe>
+
+<script>
+// Écoute les messages envoyés par Scratch
+window.addEventListener("message", (event) => {
+
+  if (event.data === "ouvrir_lien_A") {
+    window.open("https://lienA.com", "_blank");
+  }
+
+  if (event.data === "ouvrir_lien_B") {
+    window.open("https://lienB.com", "_blank");
+  }
+
+  if (event.data === "ouvrir_lien_C") {
+    window.open("https://lienC.com", "_blank");
+  }
+
+});
+</script>
+
+</body>
+</html>
